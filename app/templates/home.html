@@ -1,6 +1,23 @@
 {% extends "base.html" %}
 
 {% block main %}
-<p>Welcome to our brewsite page</p>
-<p>{{ user }}</p>
+
+<div class="container mt-3">
+    <h2>Home</h2>
+
+    <p>Welcome to our brewsite page</p>
+    <p>{{ user }}</p>
+
+    <p>My favorite beer is Michelob Ultra with lime.</p>
+
+    <img src="{{ url_for('static', filename='images/michelob.jpg') }}"
+         alt="Michelob Ultra with lime" width="30%">
+
+    <img src="{{ url_for('static', filename='images/beer.jpg') }}"
+         alt="Cold beer" width="30%">
+
+    <img src="{{ url_for('static', filename='images/brewery.jpg') }}"
+         alt="Brewery" width="30%">
+</div>
+
 {% endblock main %}
